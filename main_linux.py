@@ -123,7 +123,7 @@ page_2 = '''\n
 #Main
 def main():
     page_num = 1
-    os.system("adb tcpip 5555")
+    os.system("adb tcpip 8080")
     os.system("adb devices -l")
     print (("\n[{0}+{1}] Enter a phones ip address.(Type 99 to exit)").format(Fore.RED, Fore.WHITE))
     try:
@@ -134,7 +134,7 @@ def main():
         main()
     if device_name == '99':
         exit()
-    os.system("adb connect "+device_name+":5555")
+    os.system("adb connect "+device_name+":8080")
     option = raw_input(Fore.WHITE + "phonesploit"+Fore.RED + "(main_menu) "+Fore.WHITE + "> ")
 
     while(1):
